@@ -1,0 +1,46 @@
+### GET /
+GET http://localhost:5000
+
+### Register a new user
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+  "username": "edison",
+  "password": "1323343"
+}
+
+### Login 
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "1323343"
+}
+
+### Get todo
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzg5MTE5ODUzLCJleHAiOjE3ODkyMDYyNTN9.alOUCbHNNMBy3ENvdrohFxilwOtkGwV6P4YIcf3amE8
+
+### Create todo
+POST http://localhost:5000/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzg5MTE5ODUzLCJleHAiOjE3ODkyMDYyNTN9.alOUCbHNNMBy3ENvdrohFxilwOtkGwV6P4YIcf3amE8
+Content-Type: application/json
+
+{
+  "task": "Learn Docker"
+}
+
+### Update post
+PUt http://localhost:5000/todos/2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg5MTE5NTk4LCJleHAiOjE3ODkyMDU5OTh9.cel3yzIuozSLm6sXk-yXqg98-g6GORTqIfe7DhcGBLI
+Content-Type: application/json
+
+{
+  "completed": 1
+}
+
+### Update post
+DELETE  http://localhost:5000/todos/1
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg5MTE5NTk4LCJleHAiOjE3ODkyMDU5OTh9.cel3yzIuozSLm6sXk-yXqg98-g6GORTqIfe7DhcGBLI
